@@ -7,6 +7,7 @@ def metric(path):
     visited_cities = cities[path, :]
     distances = la.norm(visited_cities[1:] - visited_cities[:-1], axis=1)
     for i in range(0, len(path), 10):
-        if path[i] not in prime_set:
+        print(i)
+        if path[i] not in prime_set and i != 0:
             distances[i] *= 1.1
     return distances.sum()

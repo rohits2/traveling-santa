@@ -9,7 +9,7 @@ with CITIES_PATH.open() as f:
         _, x, y = line.split(",")
         cities.append((x, y))
 
-cities = np.array(cities, dtype=np.float16)
+cities = np.array(cities, dtype=np.float64)
 
 
 def primes(limit):
